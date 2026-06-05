@@ -1,0 +1,151 @@
+.menu-item-page {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
+.menu-item-page .left-side {
+  height: 100%;
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.menu-item-page .right-side {
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.menu-item-page .right-side h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 10;
+  font-size: 100px;
+}
+
+.menu-item-page button {
+  margin-top: 40px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  background-color: #121619;
+  color: whitesmoke;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Scroll List Title*/
+.related-title {
+  margin-top: 40px;
+  font-size: 24px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Scrollable Cards Container */
+.related-scroll-list {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  max-width: 50rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Scrollable Card Styling */
+.related-card {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.related-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+}
+
+/* Card Image Styling */
+.related-card img {
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 700px) {
+  .menu-item-page .right-side h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .menu-item-page .right-side {
+    margin-left: 15px;
+  }
+  
+  .left-side {
+    padding-left: 50px;
+  }
+
+  .related-scroll-list {
+  display: grid;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  max-width: 50vh;
+  overflow-y: visible;
+  }
+
+  .related-card {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 120px ;
+  text-align: center;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  transition: transform 0.2s ease-in-out;
+  margin-right: 4px;
+  
+  }
+
+  .related-card img {
+    width: 100%;
+    height: 70px;
+    border-radius: 6px;
+    margin-bottom: 0px;
+  }
+
+  .related-scroll-list::-webkit-scrollbar-thumb {
+  background: #121619;
+  border-radius: 8px;
+  } 
+
+  .related-title {
+    margin-top: 40px;
+    font-size: 20px;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+  }
+
+}
